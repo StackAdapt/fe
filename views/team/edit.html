@@ -9,9 +9,9 @@
 			<div style="margin: 0 auto; max-width: 400px;">
 
 				<ol class="breadcrumb">
-					<li><a href="/">首页</a></li>
-					<li><a href="/me/teams">用户组列表</a></li>
-					<li class="active">修改用户组</li>
+					<li><a href="/">Home</a></li>
+					<li><a href="/me/teams">UserGroup List</a></li>
+					<li class="active">Edit UserGroup</li>
 				</ol>
 
 				<div class="panel panel-default">
@@ -20,20 +20,20 @@
 					</div>
 					<div class="panel-body">
 						<div class="form-group">
-							<label for="resume">简介（方便以后能想起这个组的作用，选填）：</label> <input
+							<label for="resume">Description(Optional):</label> <input
 							type="text" id="resume" class="form-control" value="{{.TargetTeam.Resume}}"/>
 						</div>
 						<div class="form-group">
-							<label for="users">成员：</label> <input
+							<label for="users">Members:</label> <input
 							type="text" id="users" class="form-control" value="{{.TargetTeam.UserIds}}"/>
 						</div>
 						<button type="button" class="btn btn-default" onclick="edit_team('{{.TargetTeam.Id}}');">
 							<span class="glyphicon glyphicon-floppy-disk"></span>
-							更新
+							Update
 						</button>
 						<a href="/me/teams" class="btn btn-default">
 							<span class="glyphicon glyphicon-arrow-left"></span>
-							返回
+							Back
 						</a>
 					</div>
 				</div>
@@ -47,7 +47,7 @@
 <script type="text/javascript">
 $(function() {
 	$("#users").select2({
-        placeholder: "输入要添加组员的name",
+        placeholder: "input members' names",
         allowClear: true,
         multiple: true,
         quietMillis: 100,

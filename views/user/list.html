@@ -18,8 +18,8 @@ $(function() {
 			<div style="margin: 0 auto; max-width: 400px;">
 
 				<ol class="breadcrumb">
-					<li><a href="/">首页</a></li>
-					<li class="active">通讯录</li>
+					<li><a href="/">Home</a></li>
+					<li class="active">Contacts</li>
 				</ol>
 
 				<div class="form-inline mb20" role="form">
@@ -48,17 +48,17 @@ $(function() {
 							{{else}}
 							<input type="checkbox" onclick="set_role('{{.Id}}', this);">
 							{{end}}
-							管理员
+							Admin
 						</div>
 						{{end}}
-						登录账号：{{.Name}}， 中文名：{{.Cnname}}
+						Username: {{.Name}}, Full Name: {{.Cnname}}
 						<a href="/about/{{.Name}}" target="_blank" style="text-decoration:none;">
 							<span class="glyphicon glyphicon-qrcode"></span>
 						</a>
 						<br>
-						邮箱: {{.Email}}<br>
-						手机: {{.Phone}}<br>
-						IM：{{.IM}}， QQ：{{.QQ}}
+						Email: {{.Email}}<br>
+						Mobile: {{.Phone}}<br>
+						IM: {{.IM}}, QQ: {{.QQ}}
 
 						{{if gt $.Me.Role 0}}
 						<div class="pull-right">
